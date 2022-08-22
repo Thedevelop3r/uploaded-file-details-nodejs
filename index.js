@@ -29,6 +29,8 @@ app.post("/api/fileanalyse", (req, res) => {
     name: uFile.name,
     type: uFile.mimetype,
     size: uFile.size,
+    encoding: uFile.encoding,
+    md5: uFile.md5
    
   });
 
