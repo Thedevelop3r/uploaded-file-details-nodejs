@@ -57,11 +57,8 @@
     <script>
       const formData = new FormData();
       const fileField = document.querySelector('input[type="file"]');
-
       let submit = document.getElementById("button");
-
       let resultP = document.getElementById("result-p");
-
       // action
       submit.onclick = function GetData(e) {
         if (fileField.files[0] == undefined) {
