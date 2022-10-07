@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <title>File Metadata</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="/public/style.css" rel="stylesheet" type="text/css">
-   </head>
+  <head>
+    <title>File Metadata</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-   <body>
-      <div class="container">
-        <h2>API Project: File Metadata Microservice</h2>
+  <body>
+    <div class="container">
+      <header>
+        <h2>API PROJECT</h2>
+        <p>File Metadata Microservice</p>
+      </header>
 
-        <h3>Usage:</h3>
-        <p>
-          Please Upload a File ...
-        </p>
+      <div class="input-container">
+        <div class="intro">
+          <h3>Usage</h3>
+          <p>Please Upload a File ...</p>
+        </div>
+
         <div class="view">
           <h4 id="output"></h4>
-          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
-            <input id="inputfield" type="file" name="upfile">
-            <input id="button" type="submit" value="Upload">
+          <form
+            class="form"
+            enctype="multipart/form-data"
+            method="POST"
+            action="/api/fileanalyse"
+          >
+            <input id="inputfield" type="file" name="upfile" />
+            <input id="button" type="submit" value="Upload" />
           </form>
         </div>
       </div>
-      <div class="footer">
-        <p>
-          by 
-          <a href="https://github.com/Thedevelop3r/uploaded-file-details-nodejs">Bilal Arain</a>
-        </p>
-      </div>
-   </body>
+      <!-- footer -->
+       <div class="footer">
+      <p>
+        by
+        <a href="https://github.com/Thedevelop3r/uploaded-file-details-nodejs"
+          >Bilal Arain</a
+        >
+      </p>
+    </div>
+    </div>
+   
+  </body>
 </html>

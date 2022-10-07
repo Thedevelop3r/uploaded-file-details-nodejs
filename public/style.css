@@ -1,24 +1,39 @@
 /****** Main Styling ******/
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #222;
-  background-color: #ECF0F1;
+  background-color: #ecf0f1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+h3 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
 .container {
   padding: 0;
   margin-top: 40px;
+  width: 100%;
 }
 
 .footer {
-  margin-top: 60px;
+  padding: 2em 0;
+  width: 100%;
+  background-color: #aac4ff;
+}
+.footer > p {
+  width: 100%;
 }
 
 a {
-  color: #2574A9;
+  color: #2574a9;
 }
 
 input {
@@ -29,14 +44,93 @@ input {
 
 input#button {
   width: 230px;
+  background-color: #d2daff;
+  border-radius: 10%;
+  font-size: 2rem;
+  border: none;
+}
+input#button:hover {
+  background-color: #09b645;
+  color: #d2daff;
 }
 
 .view {
-  position:relative;
-  margin: auto;
-  margin-top: 40px;
-  border: 1px  solid  #aaa;
+  position: relative;
   padding: 20px;
-  width: 60%;
-  min-width: 400px;
+  width: 50%;
+  background: #d2daff;
+}
+
+/* Custom styling */
+
+header {
+  display: flex;
+  flex-direction: column;
+  background: #b1b2ff;
+  width: 100%;
+}
+header > h2 {
+  color: #eef1ff;
+  letter-spacing: 1.5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+header > p {
+  color: rgb(247, 241, 241);
+  margin: 1em 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  background: #d2daff;
+  align-items: center;
+  width: 50%;
+}
+
+.intro > h3 {
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media query */
+
+@media screen and (max-width: 520px) {
+  .input-container {
+    flex-direction: column;
+  }
+  .intro {
+    width: 100%;
+    padding: 0;
+  }
+  .view {
+    width: 100%;
+    padding: 0;
+  }
 }
