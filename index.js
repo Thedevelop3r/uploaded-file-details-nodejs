@@ -13,7 +13,6 @@ app.get("/", function (req, res) {
   res.sendFile(process.cwd() + "/views/index.html");
 });
 app.post("/api/fileanalyse", (req, res) => {
-  // console.log(req.body.msg);
   console.log(req.files.upfile);
   const uFile = req.files.upfile;
   res.json({
@@ -24,9 +23,7 @@ app.post("/api/fileanalyse", (req, res) => {
     md5: uFile.md5
    
   });
-
 });
-
 const port = process.env.PORT || 9000;
 app.listen(port, function () {
   console.log("Your app is listening on port " + port);

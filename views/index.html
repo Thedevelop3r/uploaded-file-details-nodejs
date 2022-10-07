@@ -30,7 +30,9 @@
         </div>
 
         <div class="view">
-          <h4 id="output"></h4>
+          <div class="result">
+            <p id="result-p" class="result-p"></p>
+          </div>
           <form
             class="form"
             enctype="multipart/form-data"
@@ -43,15 +45,55 @@
         </div>
       </div>
       <!-- footer -->
-       <div class="footer">
-      <p>
-        by
-        <a href="https://github.com/Thedevelop3r/uploaded-file-details-nodejs"
-          >Bilal Arain</a
-        >
-      </p>
+      <div class="footer">
+        <p>
+          by
+          <a href="https://github.com/Thedevelop3r/uploaded-file-details-nodejs"
+            >Bilal Arain</a
+          >
+        </p>
+      </div>
     </div>
-    </div>
-   
+    <script>
+      const formData = new FormData();
+      const fileField = document.querySelector('input[type="file"]');
+
+      let submit = document.getElementById("button");
+
+      let resultP = document.getElementById("result-p");
+
+      // action
+      submit.onclick = function GetData(e) {
+        if (fileField.files[0] == undefined) {
+          e.preventDefault();
+          return;
+        }
+
+        formData.append("username", "Bilal");
+        formData.append("upfile", fileField.files[0]);
+        let output;
+        fetch("/api/fileanalyse", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((result) => {
+            output = result;
+            resultP.innerText = `
+          Data-Analyzed >  
+          Name: ${output.name}
+          Type: ${output.type}
+          Size: ${output.size}
+          Encoding: ${output.encoding}
+          Md5: ${output.md5}`;
+            console.log("Success:", result);
+          })
+          .catch((error) => {
+            resultP.innerText = `Error: ${error}`;
+            console.error("Error:", error);
+          });
+        e.preventDefault();
+      };
+    </script>
   </body>
 </html>

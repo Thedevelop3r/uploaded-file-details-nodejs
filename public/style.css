@@ -19,7 +19,6 @@ p {
 }
 .container {
   padding: 0;
-  margin-top: 40px;
   width: 100%;
 }
 
@@ -48,6 +47,7 @@ input#button {
   border-radius: 10%;
   font-size: 2rem;
   border: none;
+  color: #09b645;
 }
 input#button:hover {
   background-color: #09b645;
@@ -55,10 +55,13 @@ input#button:hover {
 }
 
 .view {
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding: 20px;
   width: 50%;
   background: #d2daff;
+  align-items: center;
 }
 
 /* Custom styling */
@@ -105,7 +108,7 @@ header > p {
 }
 
 .intro > h3 {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 input {
@@ -118,10 +121,18 @@ input {
   justify-content: center;
   align-items: center;
 }
+.result{
+  width: 100%;
+}
+
+.result-p{
+  text-align: left;
+  line-height: 2em;
+}
 
 /* Media query */
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 650px) {
   .input-container {
     flex-direction: column;
   }
@@ -132,5 +143,8 @@ input {
   .view {
     width: 100%;
     padding: 0;
+  }
+  .result-p{
+    text-align: center;
   }
 }
