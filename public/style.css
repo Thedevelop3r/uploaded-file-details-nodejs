@@ -21,7 +21,6 @@ p {
   padding: 0;
   width: 100%;
 }
-
 .footer {
   padding: 2em 0;
   width: 100%;
@@ -30,17 +29,14 @@ p {
 .footer > p {
   width: 100%;
 }
-
 a {
   color: #2574a9;
 }
-
 input {
   display: block;
   position: relative;
   margin: 10px auto;
 }
-
 input#button {
   width: 230px;
   background-color: #d2daff;
@@ -53,7 +49,6 @@ input#button:hover {
   background-color: #09b645;
   color: #d2daff;
 }
-
 .view {
   display: flex;
   flex-direction: column;
@@ -63,9 +58,7 @@ input#button:hover {
   background: #d2daff;
   align-items: center;
 }
-
 /* Custom styling */
-
 header {
   display: flex;
   flex-direction: column;
@@ -83,20 +76,17 @@ header > p {
   color: rgb(247, 241, 241);
   margin: 1em 0;
 }
-
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .input-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-
 .intro {
   display: flex;
   flex-direction: column;
@@ -106,32 +96,26 @@ header > p {
   align-items: center;
   width: 50%;
 }
-
 .intro > h3 {
   margin: 2rem 0;
 }
-
 input {
   padding: 1rem;
 }
-
 .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.result{
+.result {
   width: 100%;
 }
-
-.result-p{
+.result-p {
   text-align: left;
   line-height: 2em;
 }
-
 /* Media query */
-
 @media screen and (max-width: 650px) {
   .input-container {
     flex-direction: column;
@@ -144,7 +128,7 @@ input {
     width: 100%;
     padding: 0;
   }
-  .result-p{
+  .result-p {
     text-align: center;
   }
 }
